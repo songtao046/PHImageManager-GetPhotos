@@ -2,9 +2,28 @@
 //  PHImageManager+GetPhotos.m
 //  SEPhotoUtility
 //
-//  Created by Ma SongTao on 26/04/2017.
+//  Created by Squirrel on 26/04/2017.
 //  Copyright © 2017 songtao. All rights reserved.
 //
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+// THE SOFTWARE.
+
+
 
 #import "PHImageManager+GetPhotos.h"
 #import <MobileCoreServices/MobileCoreServices.h>
@@ -87,7 +106,7 @@
 
 
 
--(NSArray*) saveOriginalImagesFromCollection:(PHAssetCollection *)collection atIndexs:(NSArray*)indexs options:(NSDictionary*)options
+-(NSArray*) saveOriginalImagesFromCollection:(PHAssetCollection *)collection atIndexes:(NSArray*)indexes
 {
     if (collection == nil) return nil;
     
@@ -95,7 +114,7 @@
     NSMutableArray *resultsArray = [NSMutableArray array];
     
     NSMutableIndexSet* indexSet = [NSMutableIndexSet indexSet];
-    for (NSNumber* index in indexs)
+    for (NSNumber* index in indexes)
     {
         [indexSet addIndex:[index integerValue]];
         //Generate file name
@@ -119,7 +138,7 @@
     fetchOptions.predicate = [NSPredicate predicateWithFormat:@"mediaType == %ld", PHAssetMediaTypeImage];
     PHFetchResult<PHAsset *> *assetResult = [PHAsset fetchAssetsInAssetCollection:collection options:fetchOptions];
     
-    for (NSNumber *index in indexs)
+    for (NSNumber *index in indexes)
     {
         PHAsset *asset = [assetResult objectAtIndex:[index integerValue]];
         
@@ -132,12 +151,6 @@
                 return;
             }
             NSDictionary* metadata = (NSDictionary *)CFBridgingRelease(CGImageSourceCopyPropertiesAtIndex(imageSource, 0, NULL));
-            
-            CGFloat quality = 0.7;
-            if (options[index])
-            {
-                quality = 1.0;
-            }
             
             [self saveThumbnailFromData:imageData metaData:metadata fileName:[results objectForKey:index]];
         }];
