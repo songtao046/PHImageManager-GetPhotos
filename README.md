@@ -4,23 +4,52 @@ Because the AssetsLibrary is deprecated after iOS 9.0, Apple use Photos framewor
 
 ## Usage
 
+/**
+Get the thumbnail image of PHAsset asynchronously
+
+@param asset the asset you want to get image from
+@param resultHandler completion block when finished get the image .
+*/
+-(void) fullScreenImageFromAsset:(PHAsset *)asset resultHandler:(void (^)(UIImage * result, NSDictionary * info))resultHandler;
+
 ```get full screen image
 [[SEPhotoUtility shareInstance] fullScreenImageFromAsset:asset resultHandler:^(UIImage *result, NSDictionary *info) {
 [scrollView configViewWithImage:result thumbnail:[SEImageCache placeHolderImage] needBlur:NO];
 }];
 ```
 
-```Save selected images to your project library directory
-NSArray* results = [[SEPhotoUtility shareInstance] saveOriginalImagesFromCollection:self.currentCollection atIndexs:self.imagePicker.selectedImageIndexes options:self.imagePicker.dictImageFullFlags spec:self.spec];
-```
+/**
+If you selected some images in a collection, save them to the project's library directory
+
+@param collection collection the collection which you selected image from
+@param indexes completion block when finished get the image .
+*/
+-(NSArray*) saveOriginalImagesFromCollection:(PHAssetCollection *)collection atIndexes:(NSArray*)indexes;
 
 ```Save selected images to your project library directory
 NSArray* results = [[SEPhotoUtility shareInstance] saveOriginalImagesFromCollection:self.currentCollection atIndexs:self.imagePicker.selectedImageIndexes options:self.imagePicker.dictImageFullFlags spec:self.spec];
 ```
+
+/**
+Get the thumbnail image of PHAsset synchronously
+
+@param asset the asset you want to get image from
+@return a thumbnail image default size is {50, 50}
+*/
+-(UIImage *) thumbnailImageFromAsset:(PHAsset *)asset;
 
 ```Get thumbnail image with PHAsset object  synchronously
     UIImage *thumbnailImage = [[SEPhotoUtility shareInstance] thumbnailImageFromAsset:asset];
 ```
+
+/**
+Get the thumbnail image of PHAsset asynchronously
+
+@param asset the asset you want to get image from
+@param resultHandler completion block when finished get the image .
+*/
+-(void) thumbnailImageFromAsset:(PHAsset *)asset resultHandler:(void (^)(UIImage * result, NSDictionary * info))resultHandler;
+
 ```Get thumbnail image with PHAsset object asynchronously
 [[SEPhotoUtility shareInstance] thumbnailImageFromAsset:asset resultHandler:^(UIImage *result, NSDictionary *info) {
     self.imageView.image = result;
