@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5659B9FB1E94F36D004D57E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5659B9FA1E94F36D004D57E3 /* main.m */; };
+		5659B9FE1E94F36D004D57E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5659B9FD1E94F36D004D57E3 /* AppDelegate.m */; };
+		5659BA041E94F36D004D57E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659BA021E94F36D004D57E3 /* Main.storyboard */; };
+		5659BA061E94F36D004D57E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5659BA051E94F36D004D57E3 /* Assets.xcassets */; };
+		5659BA091E94F36D004D57E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5659BA071E94F36D004D57E3 /* LaunchScreen.storyboard */; };
+		5659BA121E94F379004D57E3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5659BA111E94F379004D57E3 /* Photos.framework */; };
+		56B0CF731ED420710061B78A /* SQPhotoUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF6F1ED420710061B78A /* SQPhotoUtility.m */; };
+		56B0CF761ED420930061B78A /* SQImageDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF751ED420930061B78A /* SQImageDetailViewController.m */; };
+		56B0CF791ED420EB0061B78A /* SQImagePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF781ED420EB0061B78A /* SQImagePickerViewController.m */; };
+		56B0CF7C1ED421C40061B78A /* SQImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF7B1ED421C40061B78A /* SQImagePicker.m */; };
+		56B0CF851ED4228C0061B78A /* NovaPagingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF821ED4228C0061B78A /* NovaPagingScrollView.m */; };
+		56B0CF861ED4228C0061B78A /* NovaSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF841ED4228C0061B78A /* NovaSegmentedControl.m */; };
+		56B0CF891ED423090061B78A /* SQImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF881ED423090061B78A /* SQImageScrollView.m */; };
+		56B0CF8F1ED4293C0061B78A /* SQImagePickerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF8E1ED4293C0061B78A /* SQImagePickerCollectionViewCell.m */; };
+		56B0CF921ED42A330061B78A /* SQPhotoGroupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B0CF911ED42A330061B78A /* SQPhotoGroupTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5659B9F61E94F36D004D57E3 /* PHPhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PHPhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5659B9FA1E94F36D004D57E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5659B9FC1E94F36D004D57E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5659B9FD1E94F36D004D57E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5659BA031E94F36D004D57E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5659BA051E94F36D004D57E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5659BA081E94F36D004D57E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5659BA0A1E94F36D004D57E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5659BA111E94F379004D57E3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		56B0CF6E1ED420710061B78A /* SQPhotoUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoUtility.h; sourceTree = "<group>"; };
+		56B0CF6F1ED420710061B78A /* SQPhotoUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoUtility.m; sourceTree = "<group>"; };
+		56B0CF741ED420930061B78A /* SQImageDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQImageDetailViewController.h; sourceTree = "<group>"; };
+		56B0CF751ED420930061B78A /* SQImageDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQImageDetailViewController.m; sourceTree = "<group>"; };
+		56B0CF771ED420EB0061B78A /* SQImagePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQImagePickerViewController.h; sourceTree = "<group>"; };
+		56B0CF781ED420EB0061B78A /* SQImagePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQImagePickerViewController.m; sourceTree = "<group>"; };
+		56B0CF7A1ED421C40061B78A /* SQImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQImagePicker.h; sourceTree = "<group>"; };
+		56B0CF7B1ED421C40061B78A /* SQImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQImagePicker.m; sourceTree = "<group>"; };
+		56B0CF811ED4228C0061B78A /* NovaPagingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NovaPagingScrollView.h; sourceTree = "<group>"; };
+		56B0CF821ED4228C0061B78A /* NovaPagingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovaPagingScrollView.m; sourceTree = "<group>"; };
+		56B0CF831ED4228C0061B78A /* NovaSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NovaSegmentedControl.h; sourceTree = "<group>"; };
+		56B0CF841ED4228C0061B78A /* NovaSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovaSegmentedControl.m; sourceTree = "<group>"; };
+		56B0CF871ED423090061B78A /* SQImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQImageScrollView.h; sourceTree = "<group>"; };
+		56B0CF881ED423090061B78A /* SQImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQImageScrollView.m; sourceTree = "<group>"; };
+		56B0CF8D1ED4293C0061B78A /* SQImagePickerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SQImagePickerCollectionViewCell.h; path = ../SQImagePickerCollectionViewCell.h; sourceTree = "<group>"; };
+		56B0CF8E1ED4293C0061B78A /* SQImagePickerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SQImagePickerCollectionViewCell.m; path = ../SQImagePickerCollectionViewCell.m; sourceTree = "<group>"; };
+		56B0CF901ED42A330061B78A /* SQPhotoGroupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPhotoGroupTableViewController.h; sourceTree = "<group>"; };
+		56B0CF911ED42A330061B78A /* SQPhotoGroupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPhotoGroupTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5659B9F31E94F36D004D57E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5659BA121E94F379004D57E3 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5659B9ED1E94F36D004D57E3 = {
+			isa = PBXGroup;
+			children = (
+				5659B9F81E94F36D004D57E3 /* PHPhoto */,
+				5659B9F71E94F36D004D57E3 /* Products */,
+				5659BA101E94F379004D57E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5659B9F71E94F36D004D57E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5659B9F61E94F36D004D57E3 /* PHPhoto.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5659B9F81E94F36D004D57E3 /* PHPhoto */ = {
+			isa = PBXGroup;
+			children = (
+				56B0CF801ED4228C0061B78A /* ScrollView */,
+				56B0CF7A1ED421C40061B78A /* SQImagePicker.h */,
+				56B0CF7B1ED421C40061B78A /* SQImagePicker.m */,
+				56B0CF871ED423090061B78A /* SQImageScrollView.h */,
+				56B0CF881ED423090061B78A /* SQImageScrollView.m */,
+				56B0CF6E1ED420710061B78A /* SQPhotoUtility.h */,
+				56B0CF6F1ED420710061B78A /* SQPhotoUtility.m */,
+				56B0CF901ED42A330061B78A /* SQPhotoGroupTableViewController.h */,
+				56B0CF911ED42A330061B78A /* SQPhotoGroupTableViewController.m */,
+				56B0CF771ED420EB0061B78A /* SQImagePickerViewController.h */,
+				56B0CF781ED420EB0061B78A /* SQImagePickerViewController.m */,
+				56B0CF741ED420930061B78A /* SQImageDetailViewController.h */,
+				56B0CF751ED420930061B78A /* SQImageDetailViewController.m */,
+				56B0CF8D1ED4293C0061B78A /* SQImagePickerCollectionViewCell.h */,
+				56B0CF8E1ED4293C0061B78A /* SQImagePickerCollectionViewCell.m */,
+				5659BA021E94F36D004D57E3 /* Main.storyboard */,
+				5659BA051E94F36D004D57E3 /* Assets.xcassets */,
+				5659BA071E94F36D004D57E3 /* LaunchScreen.storyboard */,
+				5659BA0A1E94F36D004D57E3 /* Info.plist */,
+				5659B9F91E94F36D004D57E3 /* Supporting Files */,
+			);
+			path = PHPhoto;
+			sourceTree = "<group>";
+		};
+		5659B9F91E94F36D004D57E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5659B9FC1E94F36D004D57E3 /* AppDelegate.h */,
+				5659B9FD1E94F36D004D57E3 /* AppDelegate.m */,
+				5659B9FA1E94F36D004D57E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5659BA101E94F379004D57E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5659BA111E94F379004D57E3 /* Photos.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		56B0CF801ED4228C0061B78A /* ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				56B0CF811ED4228C0061B78A /* NovaPagingScrollView.h */,
+				56B0CF821ED4228C0061B78A /* NovaPagingScrollView.m */,
+				56B0CF831ED4228C0061B78A /* NovaSegmentedControl.h */,
+				56B0CF841ED4228C0061B78A /* NovaSegmentedControl.m */,
+			);
+			path = ScrollView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5659B9F51E94F36D004D57E3 /* PHPhoto */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5659BA0D1E94F36D004D57E3 /* Build configuration list for PBXNativeTarget "PHPhoto" */;
+			buildPhases = (
+				5659B9F21E94F36D004D57E3 /* Sources */,
+				5659B9F31E94F36D004D57E3 /* Frameworks */,
+				5659B9F41E94F36D004D57E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PHPhoto;
+			productName = PHPhoto;
+			productReference = 5659B9F61E94F36D004D57E3 /* PHPhoto.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5659B9EE1E94F36D004D57E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = songtao;
+				TargetAttributes = {
+					5659B9F51E94F36D004D57E3 = {
+						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = QCBMU7LNDS;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5659B9F11E94F36D004D57E3 /* Build configuration list for PBXProject "PHPhoto" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5659B9ED1E94F36D004D57E3;
+			productRefGroup = 5659B9F71E94F36D004D57E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5659B9F51E94F36D004D57E3 /* PHPhoto */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5659B9F41E94F36D004D57E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5659BA091E94F36D004D57E3 /* LaunchScreen.storyboard in Resources */,
+				5659BA061E94F36D004D57E3 /* Assets.xcassets in Resources */,
+				5659BA041E94F36D004D57E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5659B9F21E94F36D004D57E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56B0CF761ED420930061B78A /* SQImageDetailViewController.m in Sources */,
+				56B0CF731ED420710061B78A /* SQPhotoUtility.m in Sources */,
+				5659B9FE1E94F36D004D57E3 /* AppDelegate.m in Sources */,
+				56B0CF921ED42A330061B78A /* SQPhotoGroupTableViewController.m in Sources */,
+				56B0CF861ED4228C0061B78A /* NovaSegmentedControl.m in Sources */,
+				56B0CF891ED423090061B78A /* SQImageScrollView.m in Sources */,
+				5659B9FB1E94F36D004D57E3 /* main.m in Sources */,
+				56B0CF851ED4228C0061B78A /* NovaPagingScrollView.m in Sources */,
+				56B0CF791ED420EB0061B78A /* SQImagePickerViewController.m in Sources */,
+				56B0CF7C1ED421C40061B78A /* SQImagePicker.m in Sources */,
+				56B0CF8F1ED4293C0061B78A /* SQImagePickerCollectionViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5659BA021E94F36D004D57E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5659BA031E94F36D004D57E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5659BA071E94F36D004D57E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5659BA081E94F36D004D57E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5659BA0B1E94F36D004D57E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5659BA0C1E94F36D004D57E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5659BA0E1E94F36D004D57E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QCBMU7LNDS;
+				INFOPLIST_FILE = PHPhoto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.songtao.PHPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5659BA0F1E94F36D004D57E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = QCBMU7LNDS;
+				INFOPLIST_FILE = PHPhoto/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.songtao.PHPhoto;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5659B9F11E94F36D004D57E3 /* Build configuration list for PBXProject "PHPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5659BA0B1E94F36D004D57E3 /* Debug */,
+				5659BA0C1E94F36D004D57E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5659BA0D1E94F36D004D57E3 /* Build configuration list for PBXNativeTarget "PHPhoto" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5659BA0E1E94F36D004D57E3 /* Debug */,
+				5659BA0F1E94F36D004D57E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5659B9EE1E94F36D004D57E3 /* Project object */;
+}
