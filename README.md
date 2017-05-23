@@ -1,33 +1,34 @@
-# PHImageManager-GetPhotos
+# SQPhotoUtility
 
 Because the AssetsLibrary is deprecated after iOS 9.0, Apple use Photos framework instead of it. 
 
 ## Usage
++(SQPhotoUtility *)shareInstance;
 
 /**
-Get the thumbnail image of PHAsset asynchronously
-
-@param asset the asset you want to get image from
-@param resultHandler completion block when finished get the image .
-*/
--(void) fullScreenImageFromAsset:(PHAsset *)asset resultHandler:(void (^)(UIImage * result, NSDictionary * info))resultHandler;
+Get image count of PHAssetCollection
+ 
+ @param collection the collection who is being used.
+ @return count of image.
+ */
+-(NSInteger)imageCountOfCollection:(PHAssetCollection *)collection;
 
 ```get full screen image
-[[SEPhotoUtility shareInstance] fullScreenImageFromAsset:asset resultHandler:^(UIImage *result, NSDictionary *info) {
-[scrollView configViewWithImage:result thumbnail:[SEImageCache placeHolderImage] needBlur:NO];
+[[SQPhotoUtility shareInstance] imageCountOfCollection:collection];
 }];
 ```
 
 /**
-If you selected some images in a collection, save them to the project's library directory
+ Get the poster image of PHAssectCollection synchronously
 
-@param collection collection the collection which you selected image from
-@param indexes completion block when finished get the image .
-*/
--(NSArray*) saveOriginalImagesFromCollection:(PHAssetCollection *)collection atIndexes:(NSArray*)indexes;
+ @param collection collection the collection who is being used
+ @return a thumbnail image default size is {50, 50}
+ */
+-(UIImage*) postImageFromCollection:(PHAssetCollection *)collection;
 
-```Save selected images to your project library directory
-NSArray* results = [[SEPhotoUtility shareInstance] saveOriginalImagesFromCollection:self.currentCollection atIndexs:self.imagePicker.selectedImageIndexes options:self.imagePicker.dictImageFullFlags spec:self.spec];
+```get collection poster image
+[[SQPhotoUtility shareInstance] postImageFromCollection:collection];
+}];
 ```
 
 /**
@@ -39,7 +40,7 @@ Get the thumbnail image of PHAsset synchronously
 -(UIImage *) thumbnailImageFromAsset:(PHAsset *)asset;
 
 ```Get thumbnail image with PHAsset object  synchronously
-    UIImage *thumbnailImage = [[SEPhotoUtility shareInstance] thumbnailImageFromAsset:asset];
+    UIImage *thumbnailImage = [[SQPhotoUtility shareInstance] thumbnailImageFromAsset:asset];
 ```
 
 /**
@@ -51,10 +52,36 @@ Get the thumbnail image of PHAsset asynchronously
 -(void) thumbnailImageFromAsset:(PHAsset *)asset resultHandler:(void (^)(UIImage * result, NSDictionary * info))resultHandler;
 
 ```Get thumbnail image with PHAsset object asynchronously
-[[SEPhotoUtility shareInstance] thumbnailImageFromAsset:asset resultHandler:^(UIImage *result, NSDictionary *info) {
+[[SQPhotoUtility shareInstance] thumbnailImageFromAsset:asset resultHandler:^(UIImage *result, NSDictionary *info) {
     self.imageView.image = result;
 }];
 ```
+
+/**
+ Get the full screen image of PHAsset asynchronously
+ 
+ @param asset the asset you want to get image from
+ @param resultHandler completion block when finished get the image .
+ */
+-(void) fullScreenImageFromAsset:(PHAsset *)asset resultHandler:(void (^)(UIImage * result, NSDictionary * info))resultHandler;
+
+/**
+If you selected some images in a collection, save them to the project's library directory
+
+ @param collection collection the collection which you selected image from
+ @param indexes completion block when finished get the image .
+ @param path where the image would be saved.
+*/
+-(NSArray*) saveOriginalImagesFromCollection:(PHAssetCollection *)collection atIndexes:(NSArray*)indexes directoryPath:(NSString *)path;
+
+/**
+ Asset image file size.
+ 
+ @param asset the asset you want to get file size
+ @param resultHandler completion block give the file size infomation.
+ 
+ */
+-(void)fileSizeWithAsset:(PHAsset *)asset resultHandler:(void (^)(long long fileSize))resultHandler;
 
 ## License
 
